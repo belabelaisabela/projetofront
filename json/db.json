@@ -1,0 +1,12 @@
+{
+ "produtos": [
+        {
+            "codigo": 1,
+            "titulo": "CREATINA MONOHIDRATADA",
+            "data": "14/06/2023",
+            "preco": 79.92,
+            "descricao": "Qualidade internacional e preco de fabrica",
+            "imagem": "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/72/creatina-monohidratada-growth.png"
+        }
+    ]
+}
