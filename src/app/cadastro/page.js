@@ -12,7 +12,7 @@ export default function Cadastro() {
     const [descricao, setDescricao] = useState();
     const [imagem, setImagem] = useState();
 
-    const cadastrar = (e) => {
+    const cadastro = (e) => {
         e.preventDefault()
         
         const produto = {
@@ -38,7 +38,7 @@ export default function Cadastro() {
         <div className={styles.header} ><img className={styles.logo} src='https://www.gsuplementos.com.br/checkout/tema/checkout/img/carrinho-gsuplementos/logo.svg'></img></div>
         
         <div className={styles.containerform}>
-            <form  onSubmit={cadastrar}>
+            <form method='submit' onSubmit={cadastro}>
                 <input type="text" placeholder='Código:' nome="codigo" className={styles.forminput} onChange={e => setCodigo(e.target.value)}
                 /><br/>
                 <input type="text" placeholder='Título:' nome="titulo" className={styles.forminput} onChange={e => setTitulo(e.target.value)}

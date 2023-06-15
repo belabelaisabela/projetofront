@@ -18,7 +18,7 @@ export default async function Home() {
           <p>{produtos.preco}</p>
           <p>{produtos.descricao}</p>
           <p>{produtos.imagem}</p>
-          <Link href={`/produto/${produtos.id}`}>ver mais</Link>
+          <Link href={`/produto/id${produtos.id}`}>ver mais</Link>
           
         </div>
       ))}
