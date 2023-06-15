@@ -8,7 +8,7 @@ export default async function Produto({ params }) {
 
     const idJson = JSON.stringify(id);
 
-    const req = await fetch("http://localhost:3004/produtos", {
+    const req = await fetch("http://localhost:3003/produto", {
         method: "POST",
         cache: "no-cache",
         headers: { 'content-type': 'application/json' },
@@ -17,28 +17,15 @@ export default async function Produto({ params }) {
     const produto = await req.json();
 
 
-    const remover = () => {
-        console.log(idJson)
-        try {
-            fetch("http://localhost:3004/produtos", {
-                method: "DELETE",
-                headers: { 'content-type': 'application/json' },
-                body: idJson
-            })
-            router.push("/");
-        } catch (error) {
-            alert("Ocorreu um erro" + error)
-        }
-    }
+
     return (
         <div>
-            <p>{produto.codigo}aa</p>
+            <p>{produto.codigo}</p>
             <p>{produto.titulo}</p>
             <p>{produto.data}</p>
             <p>{produto.preco}</p>
             <p>{produto.descricao}</p>
             <p>{produto.imagem}</p>
-            <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
 
         </div>
 

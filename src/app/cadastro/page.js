@@ -14,18 +14,17 @@ export default function Cadastro() {
 
     const cadastro = (e) => {
         e.preventDefault()
-        
+        alert(titulo)
         const produto = {
-            codigo: codigo,
             titulo: titulo,
-            data: data,
+            data_cadastro: data,
             preco: preco,
             descricao: descricao,
             imagem: imagem
 
         }
-        const produtoJson = JSON.stringify(produto);
-        fetch("http://localhost:3004/produto", {
+        const produtoJson = JSON.stringify(produto); 
+        fetch("http://localhost:3003/produtos", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: produtoJson
@@ -35,7 +34,7 @@ export default function Cadastro() {
     return (
         <main className={styles.sitetodo}>
 
-        <div className={styles.header} ><img className={styles.logo} src='https://www.gsuplementos.com.br/checkout/tema/checkout/img/carrinho-gsuplementos/logo.svg'></img></div>
+        <div className={styles.header}><img className={styles.logo} src='https://www.gsuplementos.com.br/checkout/tema/checkout/img/carrinho-gsuplementos/logo.svg'></img></div>
         
         <div className={styles.containerform}>
             <form method='submit' onSubmit={cadastro}>
