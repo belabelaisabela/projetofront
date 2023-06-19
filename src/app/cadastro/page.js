@@ -35,7 +35,7 @@ export default function Cadastro() {
         <main className={styles.sitetodo}>
 
         <div className={styles.header}><img className={styles.logo} src='https://www.gsuplementos.com.br/checkout/tema/checkout/img/carrinho-gsuplementos/logo.svg'></img></div>
-        
+          
         <div className={styles.containerform}>
             <form method='submit' onSubmit={cadastro}>
                 <input type="text" placeholder='Código:' nome="codigo" className={styles.forminput} onChange={e => setCodigo(e.target.value)}

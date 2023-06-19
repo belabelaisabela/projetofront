@@ -37,7 +37,7 @@ export default async function Home() {
   <div className={styles.containerfull}>
       {produtos.map(produtos => (
         <div key={produtos.codigo} className={styles.tudo}>
-          <img  style={{width: 100, marginLeft: 125}} src={produtos.imagem}></img>
+          <img  style={{width: 100, marginLeft: 125, marginTop:10}} src={produtos.imagem}></img>
           <h3 style={{fontWeight: 'bold', textAlign: 'center'}}>{produtos.titulo}</h3>
           <p style={{textAlign: 'center', fontSize: 25}}>{produtos.preco}</p>
           <h4 style={{textAlign: 'center', outline: 'none' }}><Link href={`/produto/${produtos.codigo}`}>ver mais</Link></h4><br/>
