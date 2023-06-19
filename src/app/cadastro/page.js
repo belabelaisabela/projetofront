@@ -52,7 +52,7 @@ export default function Cadastro() {
                 /><br/>
                 <button type='submit' className={styles.submitbt}>Cadastrar</button>
                 <div>
-                    <a href='/' className={styles.submitbt2}>Ver Produtos</a>
+                    <button type='submit' className={styles.submitbt2}><a href='/' >Ver Produtos</a></button>
                 </div>
             </form>
         </div>

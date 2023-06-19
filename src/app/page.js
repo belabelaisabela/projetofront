@@ -31,7 +31,7 @@ export default async function Home() {
   return (
     <main> 
     <div className={styles.header}><img className={styles.logo} src='https://www.gsuplementos.com.br/checkout/tema/checkout/img/carrinho-gsuplementos/logo.svg'></img></div>
-    <h1><Link href="/cadastro" className='voltar'> CADASTRAR ITEM </Link></h1>
+    <button className={styles.botaocadastro}><Link href="/cadastro" className='voltar'> CADASTRAR ITEM </Link></button>
     <h1>PRODUTOS</h1>
 <div >
   <div className={styles.containerfull}>
@@ -40,7 +40,7 @@ export default async function Home() {
           <img  style={{width: 100, marginLeft: 125, marginTop:10}} src={produtos.imagem}></img>
           <h3 style={{fontWeight: 'bold', textAlign: 'center'}}>{produtos.titulo}</h3>
           <p style={{textAlign: 'center', fontSize: 25}}>{produtos.preco}</p>
-          <h4 style={{textAlign: 'center', outline: 'none' }}><Link href={`/produto/${produtos.codigo}`}>ver mais</Link></h4><br/>
+          <h4 style={{textAlign: 'center', outline: 'none', color: 'black', marginLeft: 140, background: 'lightblue', width: 70, borderRadius: 5 }}><Link href={`/produto/${produtos.codigo}`}>ver mais</Link></h4><br/>
           <button className={styles.submitproduto} onClick={e => e.preventDefault(remover(produtos.codigo))}>REMOVER</button><br/>
         </div>
       ))}
